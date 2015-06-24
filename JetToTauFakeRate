@@ -1,1 +1,41 @@
 Here is the instruction to measure the jet otau fake rate
+
+Try to get fresh version of CMSSW
+
+cmsrel CMSSW_7_2_3
+
+cd CMSSW_7_2_3/src
+
+cmsenv
+
+mkdir TauTutorial
+
+mkedanlzr JetToTauFR
+
+cd JetToTauFR
+
+scram b -j  4
+
+cd python
+
+replace file:myfile.root   with   
+'/store/mc/Phys14DR/WJetsToLNu_13TeV-madgraph-pythia8-tauola/MINIAODSIM/PU20bx25_PHYS14_25_V1-v1/00000/02215B44-2D70-E411-90A3-0025905A60B8.root'
+
+
+add following line in cfg file
+process.TFileService = cms.Service("TFileService",
+                                       fileName = cms.string('histodemo.root')
+                                   )
+                                   
+
+in the constructor initite 2 histograms:
+
+        denumerator = fs->make<TH1D>("denumerator" , "denumerator" , 200 , 0 , 200);
+        
+        numerator = fs->make<TH1D>("numerator" , "numerator" , 200 , 0 , 200);
+        
+        
+            
+
+
+
