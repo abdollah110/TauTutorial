@@ -78,7 +78,7 @@ UPdate the BuildFile:
 
 Make a pre-selection in the muon and tau collection loop:
 
-   bool Preselection = itmu->px() > 20 && fabs(itmu->px()) < 2.4 &&   itmu->isPFMuon() &&   ittau->px() > 20 && fabs(ittau->px()) < 2.3 && (itmu->charge() * ittau->charge() < 0);
+   bool Preselection = itmu->pt() > 20 && fabs(itmu->eta()) < 2.4 &&   itmu->isPFMuon() &&   ittau->pt() > 20 && fabs(ittau->eta()) < 2.3 && (itmu->charge() * ittau->charge() < 0);
 
 
 make the denumerator:    
@@ -89,8 +89,8 @@ make the denumerator:
     
     Fill a numerator and denumerator Histograms:
     
-    if (numetaor) HistNumerator->Fill(ittau->px());
-if (denumetaor) HistDenumerator->Fill(ittau->px());
+    if (numetaor) HistNumerator->Fill(ittau->pt());
+if (denumetaor) HistDenumerator->Fill(ittau->pt());
 
 
 
