@@ -109,8 +109,11 @@
       python plotFakeRate.py
 
 
+#  Now measure tau fake rate  for different tau Isolation working point listed here: 
+#  https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuidePFTauID#Tau_ID_2014_preparation_for_AN1
 
-     
+ # The bnext excerise is to make the Jet to tau fake rate v.s. closest PFJet   to taus
+ # ANd Finally To select the WJet events from data, you need to require the MT of the muon and MET to be less than 30 GeV
         
         
         
