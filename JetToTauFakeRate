@@ -106,6 +106,7 @@
       
 # Use a python macro to plot the fake rate:
       wget https://raw.githubusercontent.com/abdollah110/TauTutorial/master/plotFakeRate.py
+      python plotFakeRate.py
 
 
 
