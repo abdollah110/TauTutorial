@@ -2,13 +2,15 @@
 
 #Try to get fresh version of CMSSW
 
-      cmsrel CMSSW_7_2_3
+      cmsrel CMSSW_7_4_1_patch1
 
-      cd CMSSW_7_2_3/src
+      cd CMSSW_7_4_1_patch1
 
       cmsenv
 
       mkdir TauTutorial  
+      
+      cd TauTutorial
 
       mkedanlzr JetToTauFR
 
@@ -19,11 +21,21 @@
       cd python
 
 #replace file:myfile.root   with   
-      
-'/store/mc/Phys14DR/WJetsToLNu_13TeV-madgraph-pythia8-tauola/MINIAODSIM/PU20bx25_PHYS14_25_V1-v1/00000/02215B44-2D70-E411-90A3-0025905A60B8.root',
-'/store/mc/Phys14DR/WJetsToLNu_13TeV-madgraph-pythia8-tauola/MINIAODSIM/PU20bx25_PHYS14_25_V1-v1/00000/0603D444-2D70-E411-AF03-002618943922.root',
-'/store/mc/Phys14DR/WJetsToLNu_13TeV-madgraph-pythia8-tauola/MINIAODSIM/PU20bx25_PHYS14_25_V1-v1/00000/08947C88-3570-E411-974E-002618FDA26D.root',
-'/store/mc/Phys14DR/WJetsToLNu_13TeV-madgraph-pythia8-tauola/MINIAODSIM/PU20bx25_PHYS14_25_V1-v1/00000/1225D443-2D70-E411-9D85-0025905B85F6.root'
+
+
+# Here is the file in DAS:   https://cmsweb.cern.ch/das/request?input=dataset%3D%2FWJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8%2FRunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1%2FMINIAODSIM&instance=prod%2Fglobal      
+
+/store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/048FB1EE-33FD-E411-A2BA-0025905A6094.root
+/store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/08B24FC8-3FFD-E411-86E6-00266CFFA604.root
+/store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/102074F7-43FD-E411-940E-0025905964B6.root
+/store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/127CC7AB-50FE-E411-A966-002590200A40.root
+/store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/12849563-41FD-E411-A9C2-0025905C9742.root
+/store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/14739BDA-41FD-E411-83EA-1CC1DE046F00.root
+/store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/20290DD9-41FD-E411-B8D0-1CC1DE04FF50.root
+/store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/267AADCE-40FD-E411-9DC3-047D7BD6DDAE.root
+/store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/26D580AA-EFFD-E411-943E-AC853D9DAC25.root
+/store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/2CAAB8B1-11FE-E411-A542-00266CFFBEB4.root
+
 
 #add following line in cfg file
       process.TFileService = cms.Service("TFileService",
