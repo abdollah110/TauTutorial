@@ -113,8 +113,15 @@ TH1D * HistNumerator;
 ########################################################
 
 #Make a pre-selection in the muon and tau collection loop:
-      bool Preselection = itmu->pt() > 20 && fabs(itmu->eta()) < 2.4 &&   itmu->isPFMuon() > 0 &&   ittau->pt() > 20 && fabs(ittau->eta()) < 2.3 ;
-
+     
+     TLorentzVector lorMu, lorTau;
+    lorMu.SetPtEtaPhiE(itmu->pt() ,itmu->eta() ,itmu->phi() ,itmu->p() );
+    lorTau.SetPtEtaPhiE(ittau->pt() ,ittau->eta() ,ittau->phi() ,ittau->p() );
+    bool Preselection = itmu->pt() > 20 && fabs(itmu->eta()) < 2.4 &&   itmu->isPFMuon() > 0 &&   ittau->pt() > 20 && fabs(ittau->eta()) < 2.3 && lorTau.DeltaR(lorMu) > 0.5 ;
+    
+    
+     
+      
 
 #make the denumerator:    
       bool denumetaor = Preselection && ittau->tauID("decayModeFindingNewDMs") > 0.5;
