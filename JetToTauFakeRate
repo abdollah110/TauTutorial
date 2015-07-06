@@ -51,10 +51,22 @@
       #include "FWCore/ServiceRegistry/interface/Service.h"
       #include "CommonTools/UtilAlgos/interface/TFileService.h"
       #include "TH1D.h"
+      #include <memory>
+#include "TMath.h"
+#include "TFile.h"
+#include "TH1.h"
+#include "TH2.h"
+#include "TTree.h"
+#include "TLorentzVector.h"
 
 #add the following line in the plugins/BuildFile.xml
       
       <use name="CommonTools/UtilAlgos"/>
+
+
+# under the private   add the following lines:
+TH1D * HistDenumerator;
+TH1D * HistNumerator;
 
 
 #in the constructor initite 2 histograms:
