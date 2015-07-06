@@ -46,7 +46,7 @@
 
 ########################################################
 
-#Add following lines in the plugins/JetToTauFR.cc
+#Add following lines in the ../plugins/JetToTauFR.cc
 
       #include "FWCore/ServiceRegistry/interface/Service.h"
       #include "CommonTools/UtilAlgos/interface/TFileService.h"
