@@ -150,9 +150,22 @@ cmsRun python/ConfFile_cfg.py
 #  https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuidePFTauID#Tau_ID_2014_preparation_for_AN1
 
  # The bnext excerise is to make the Jet to tau fake rate v.s. closest PFJet   to taus
- # ANd Finally To select the WJet events from data, you need to require the MT of the muon and MET to be less than 30 GeV
+ # ANd Finally To select the WJet events from data, you need to require the MT of the muon and MET to be more than 30 GeV
         
         
+It is also intereting to measure the jet to tau fake rate in terms of the Jet Pt.  So instead of making loop over taus you make a loop
+over jets. For each Jet you need again to make a loop over tau collection to find the taus that match that Jet (dr (ket,tau)). 
+Try to find the taus that is closest to Jet.
+In teh denumerator put Jet Pt > 20 GV and tau pass decay mode finding.
+In the numerator require denumerator + tau Pass Isolation.
+
+Here is how you can access the Jets.
+
+jetTag = cms.InputTag("slimmedJets"),
+
+
+Also you can access the MET like the following
+metTag = cms.InputTag("pfMet"),
         
         
             
