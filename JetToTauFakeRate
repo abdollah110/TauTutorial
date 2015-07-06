@@ -2,6 +2,8 @@
 
 #Try to get fresh version of CMSSW
 
+      setenv  SCRAM_ARCH slc6_amd64_gcc481
+
       cmsrel CMSSW_7_4_1_patch1
 
       cd CMSSW_7_4_1_patch1
