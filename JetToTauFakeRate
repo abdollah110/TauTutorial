@@ -119,6 +119,10 @@ TH1D * HistNumerator;
       if (denumetaor) HistDenumerator->Fill(ittau->pt());
       
       
+#  run the code from the JetToTauFR directory:
+
+cmsRun python/ConfFile_cfg.py
+      
 # Use a python macro to plot the fake rate:
       wget https://raw.githubusercontent.com/abdollah110/TauTutorial/master/plotFakeRate.py
       python plotFakeRate.py
