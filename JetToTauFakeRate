@@ -57,7 +57,7 @@ use the following line (from lpc machines):
 
 ########################################################
 
-#Add following lines in the ../plugins/JetToTauFR.cc
+#Add following lines in the plugins/JetToTauFR.cc file:
 
       #include "FWCore/ServiceRegistry/interface/Service.h"
       #include "CommonTools/UtilAlgos/interface/TFileService.h"
